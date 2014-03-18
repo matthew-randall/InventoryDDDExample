@@ -1,0 +1,5 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Test.Unit\bin\Debug\Unleashed.Application.Companies.Test.Unit.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Test.Unit\bin\Debug\Unleashed.Application.Companies.Test.Unit.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Test.Unit\obj\Debug\Unleashed.Application.Companies.Test.Unit.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Test.Unit\obj\Debug\Unleashed.Application.Companies.Test.Unit.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Test.Unit\obj\Debug\Unleashed.Application.Companies.Test.Unit.csprojResolveAssemblyReference.cache

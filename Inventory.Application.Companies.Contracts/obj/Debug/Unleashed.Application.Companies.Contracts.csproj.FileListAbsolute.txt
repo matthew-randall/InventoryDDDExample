@@ -1,0 +1,5 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Contracts\bin\Debug\Unleashed.Application.Companies.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Contracts\bin\Debug\Unleashed.Application.Companies.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Contracts\obj\Debug\Unleashed.Application.Companies.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Contracts\obj\Debug\Unleashed.Application.Companies.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Application.Companies.Contracts\obj\Debug\Unleashed.Application.Companies.Contracts.csprojResolveAssemblyReference.cache

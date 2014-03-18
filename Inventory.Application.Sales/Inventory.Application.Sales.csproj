@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0B88FC8-F88F-4045-9076-4086CC554C53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory.Application.Sales</RootNamespace>
+    <AssemblyName>Inventory.Application.Sales</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DllConfig.cs" />
+    <Compile Include="Domain\Company.cs" />
+    <Compile Include="Domain\Creation\CustomerBuilder.cs" />
+    <Compile Include="Domain\Creation\Interface\ICustomerBuilder.cs" />
+    <Compile Include="Domain\Creation\Interface\ISalesInvoiceBuilder.cs" />
+    <Compile Include="Domain\Creation\Interface\ISalesOrderBuilder.cs" />
+    <Compile Include="Domain\Creation\Interface\IShipmentBuilder.cs" />
+    <Compile Include="Domain\Creation\ShipmentBuilder.cs" />
+    <Compile Include="Domain\Creation\SalesInvoiceBuilder.cs" />
+    <Compile Include="Domain\Creation\SalesOrderBuilder.cs" />
+    <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\Interface\ICompany.cs" />
+    <Compile Include="Domain\Interface\ICustomer.cs" />
+    <Compile Include="Domain\Interface\ISalesInvoice.cs" />
+    <Compile Include="Domain\Interface\ISalesInvoiceLine.cs" />
+    <Compile Include="Domain\Interface\ISalesOrder.cs" />
+    <Compile Include="Domain\Interface\ISalesOrderLine.cs" />
+    <Compile Include="Domain\Interface\IShipment.cs" />
+    <Compile Include="Domain\Interface\IShipmentLine.cs" />
+    <Compile Include="Domain\Interface\IWarehouseProduct.cs" />
+    <Compile Include="Domain\SalesInvoice.cs" />
+    <Compile Include="Domain\SalesInvoiceLine.cs" />
+    <Compile Include="Domain\SalesOrder.cs" />
+    <Compile Include="Domain\SalesOrderLine.cs" />
+    <Compile Include="Domain\SalesOrderLineStates\Interface\ISalesOrderLineState.cs" />
+    <Compile Include="Domain\SalesOrderLineStates\SalesOrderLineClosedState.cs" />
+    <Compile Include="Domain\SalesOrderLineStates\SalesOrderLineOpenState.cs" />
+    <Compile Include="Domain\SalesOrderStates\Interface\ISalesOrderState.cs" />
+    <Compile Include="Domain\SalesOrderStates\SalesOrderCompletedState.cs" />
+    <Compile Include="Domain\SalesOrderStates\SalesOrderDeletedState.cs" />
+    <Compile Include="Domain\SalesOrderStates\SalesOrderParkedState.cs" />
+    <Compile Include="Domain\Shipment.cs" />
+    <Compile Include="Domain\ShipmentLine.cs" />
+    <Compile Include="Domain\WarehouseProduct.cs" />
+    <Compile Include="Services\Builders\Interface\ISalesOrderVmBuilder.cs" />
+    <Compile Include="Services\Builders\SalesOrderVmBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\AddressVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\CompanyFeaturesVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\CurrencyVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\IAddressVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\ICompanyFeatureVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\ICurrencyVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\ISalesOrderDtModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\ISalesTaxVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\SalesOrderDtModelBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ModelBuilders\Interface\ISalesOrderVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\SalesOrderVmModelBuilder.cs" />
+    <Compile Include="Services\ModelBuilders\SalesTaxVmModelBuilder.cs" />
+    <Compile Include="Transactions\SalesTransactions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
+      <Project>{7E3698AC-29A5-4AA5-BB8D-9349BB299C41}</Project>
+      <Name>Inventory.Application.Companies.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Sales.Contracts\Inventory.Application.Sales.Contracts.csproj">
+      <Project>{613d9cca-95d2-4c70-b25b-229b2f70476c}</Project>
+      <Name>Inventory.Application.Sales.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.DependencyInjector\Inventory.DependencyInjector.csproj">
+      <Project>{CDFDB3CA-8AFA-4E35-A784-7F24C937E1A4}</Project>
+      <Name>Inventory.DependencyInjector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Repository.Base.Contracts\Inventory.Repository.Base.Contracts.csproj">
+      <Project>{7eb4a57d-95aa-4b7e-97ec-18cdad414212}</Project>
+      <Name>Inventory.Repository.Base.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Repository.Sales.Contracts\Inventory.Repository.Sales.Contracts.csproj">
+      <Project>{709fad54-9bd7-4de9-b5f0-acd2025e33c4}</Project>
+      <Name>Inventory.Repository.Sales.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\SalesInvoiceLineStates\" />
+    <Folder Include="Domain\SalesInvoiceStates\" />
+    <Folder Include="Domain\ShipmentLineStates\" />
+    <Folder Include="Domain\ShipmentStates\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

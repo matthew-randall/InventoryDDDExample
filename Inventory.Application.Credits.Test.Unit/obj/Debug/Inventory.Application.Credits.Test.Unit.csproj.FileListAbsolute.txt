@@ -1,0 +1,9 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\Inventory.Application.Credits.Test.Unit.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\Inventory.Application.Credits.Test.Unit.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\Moq.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\nunit.framework.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\Moq.xml
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\bin\Debug\nunit.framework.xml
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\obj\Debug\Inventory.Application.Credits.Test.Unit.csprojResolveAssemblyReference.cache
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\obj\Debug\Inventory.Application.Credits.Test.Unit.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Application.Credits.Test.Unit\obj\Debug\Inventory.Application.Credits.Test.Unit.pdb

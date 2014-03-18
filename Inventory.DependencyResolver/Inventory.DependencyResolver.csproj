@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27DF8295-EAF3-4786-A926-CF6E021A1A13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventory.DependencyResolver</RootNamespace>
+    <AssemblyName>Inventory.DependencyResolver</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\CompaniesDependencyResolver.cs" />
+    <Compile Include="Application\CreditDependencyResolver.cs" />
+    <Compile Include="Application\SalesDependencyResolver.cs" />
+    <Compile Include="Interface\IDependencyResolver.cs" />
+    <Compile Include="NinjectDependencyResolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\SalesDependencyResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
+      <Project>{7E3698AC-29A5-4AA5-BB8D-9349BB299C41}</Project>
+      <Name>Inventory.Application.Companies.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Companies\Inventory.Application.Companies.csproj">
+      <Project>{196FF8C1-6B4E-44C5-9A10-779E917F4590}</Project>
+      <Name>Inventory.Application.Companies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Credits.Contracts\Inventory.Application.Credits.Contracts.csproj">
+      <Project>{823968D1-405B-4250-91AE-F4C8B4233C45}</Project>
+      <Name>Inventory.Application.Credits.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Credits\Inventory.Application.Credits.csproj">
+      <Project>{EAF8526B-8700-4EDB-A1F1-781186AA217D}</Project>
+      <Name>Inventory.Application.Credits</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Sales.Contracts\Inventory.Application.Sales.Contracts.csproj">
+      <Project>{613D9CCA-95D2-4C70-B25B-229B2F70476C}</Project>
+      <Name>Inventory.Application.Sales.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Application.Sales\Inventory.Application.Sales.csproj">
+      <Project>{F0B88FC8-F88F-4045-9076-4086CC554C53}</Project>
+      <Name>Inventory.Application.Sales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Repository.Fake\Inventory.Repository.Fake.csproj">
+      <Project>{753F737C-C4EE-4BB8-9D71-E75D9C01B586}</Project>
+      <Name>Inventory.Repository.Fake</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.Repository.Sales.Contracts\Inventory.Repository.Sales.Contracts.csproj">
+      <Project>{709FAD54-9BD7-4DE9-B5F0-ACD2025E33C4}</Project>
+      <Name>Inventory.Repository.Sales.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

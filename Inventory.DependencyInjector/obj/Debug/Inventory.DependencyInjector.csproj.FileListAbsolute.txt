@@ -1,0 +1,8 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\bin\Debug\Inventory.DependencyInjector.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\bin\Debug\Inventory.DependencyInjector.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\bin\Debug\Ninject.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\bin\Debug\Ninject.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\bin\Debug\Ninject.xml
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\obj\Debug\Inventory.DependencyInjector.csprojResolveAssemblyReference.cache
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\obj\Debug\Inventory.DependencyInjector.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.DependencyInjector\obj\Debug\Inventory.DependencyInjector.pdb

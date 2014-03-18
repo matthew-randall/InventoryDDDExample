@@ -1,0 +1,7 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\bin\Debug\Inventory.Repository.Sales.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\bin\Debug\Inventory.Repository.Sales.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\bin\Debug\Inventory.Repository.Base.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\bin\Debug\Inventory.Repository.Base.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\obj\Debug\Inventory.Repository.Sales.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\obj\Debug\Inventory.Repository.Sales.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Sales.Contracts\obj\Debug\Inventory.Repository.Sales.Contracts.pdb

@@ -1,0 +1,11 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Fake.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Fake.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Base.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Sales.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Base.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Sales.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\obj\Debug\Unleashed.Repository.Fake.csprojResolveAssemblyReference.cache
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\obj\Debug\Unleashed.Repository.Fake.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\obj\Debug\Unleashed.Repository.Fake.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Companies.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Unleashed\Unleashed.Repository.Fake\bin\Debug\Unleashed.Repository.Companies.Contracts.pdb

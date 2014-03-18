@@ -1,0 +1,11 @@
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Fake.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Fake.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Base.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Companies.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Sales.Contracts.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Base.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Companies.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\bin\Debug\Inventory.Repository.Sales.Contracts.pdb
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\obj\Debug\Inventory.Repository.Fake.csprojResolveAssemblyReference.cache
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\obj\Debug\Inventory.Repository.Fake.dll
+C:\Users\mattr\Documents\Visual Studio 2013\Projects\Inventory\Inventory.Repository.Fake\obj\Debug\Inventory.Repository.Fake.pdb
