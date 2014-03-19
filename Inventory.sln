@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Credi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Credits.Contracts", "Inventory.Application.Credits.Contracts\Inventory.Application.Credits.Contracts.csproj", "{823968D1-405B-4250-91AE-F4C8B4233C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Credits.Test.Unit", "Inventory.Application.Credits.Test.Unit\Inventory.Application.Credits.Test.Unit.csproj", "{3BBB0BD5-D82D-46F9-9BF5-4701229A9B82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Credits.Tests.Unit", "Inventory.Application.Credits.Test.Unit\Inventory.Application.Credits.Tests.Unit.csproj", "{3BBB0BD5-D82D-46F9-9BF5-4701229A9B82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Sales", "Inventory.Application.Sales\Inventory.Application.Sales.csproj", "{F0B88FC8-F88F-4045-9076-4086CC554C53}"
 EndProject

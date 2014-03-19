@@ -39,17 +39,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\CreditStatus.cs" />
+    <Compile Include="Enum\CreditType.cs" />
     <Compile Include="Enum\CustomerType.cs" />
+    <Compile Include="Enum\SalesInvoiceStatus.cs" />
     <Compile Include="Enum\SalesOrderStatus.cs" />
     <Compile Include="Models\AccountDt.cs" />
     <Compile Include="Models\AddressDt.cs" />
     <Compile Include="Models\CompanyDt.cs" />
     <Compile Include="Models\ContactDt.cs" />
+    <Compile Include="Models\CreditDt.cs" />
+    <Compile Include="Models\CreditLineDt.cs" />
+    <Compile Include="Models\CreditReasonDt.cs" />
     <Compile Include="Models\CurrencyDt.cs" />
     <Compile Include="Models\CustomerDt.cs" />
     <Compile Include="Models\DeliveryMethodDt.cs" />
     <Compile Include="Models\PaymentTermDt.cs" />
+    <Compile Include="Models\ProductDt.cs" />
     <Compile Include="Models\SalesInvoiceDt.cs" />
+    <Compile Include="Models\SalesInvoiceLineDt.cs" />
     <Compile Include="Models\SalesOrderDt.cs" />
     <Compile Include="Models\SalesPersonDt.cs" />
     <Compile Include="Models\SalesTaxDt.cs" />
