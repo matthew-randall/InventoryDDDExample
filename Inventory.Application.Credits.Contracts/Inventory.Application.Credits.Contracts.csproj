@@ -39,12 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CreditLineViewModel.cs" />
-    <Compile Include="Model\CreditViewModel.cs" />
-    <Compile Include="Model\SalesInvoiceLineViewModel.cs" />
-    <Compile Include="Model\SalesInvoiceViewModel.cs" />
+    <Compile Include="Interface\ICreditQueries.cs" />
+    <Compile Include="Commands\CreditLineViewCommand.cs" />
+    <Compile Include="Commands\CreditViewCommand.cs" />
+    <Compile Include="Commands\SalesInvoiceLineViewCommand.cs" />
+    <Compile Include="Commands\SalesInvoiceViewCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Interface\Transactions\ICreditTransactions.cs" />
+    <Compile Include="Interface\ICreditCommands.cs" />
+    <Compile Include="Queries\CreditViewQuery.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

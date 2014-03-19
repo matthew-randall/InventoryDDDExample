@@ -1,12 +1,12 @@
 ﻿using Moq;
 using NUnit.Framework;
 using Inventory.Application.Sales.Contracts.Models;
-using Inventory.Application.Sales.Domain.Interface;
+using Inventory.Application.Sales.CommandDomain.Interface;
 using Inventory.Application.Sales.Services.Builders;
 using Inventory.Application.Sales.Services.ModelBuilders.Interface;
 using Inventory.Repository.Base.Contracts.Models;
 
-namespace Inventory.Application.Sales.Test.Unit.Services.Builders
+namespace Inventory.Application.Sales.Tests.Unit.Services.Builders
 {
     [TestFixture]
     public class SalesOrderVmBuilderTests

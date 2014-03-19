@@ -43,39 +43,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DllConfig.cs" />
-    <Compile Include="Domain\Company.cs" />
-    <Compile Include="Domain\Creation\CustomerBuilder.cs" />
-    <Compile Include="Domain\Creation\Interface\ICustomerBuilder.cs" />
-    <Compile Include="Domain\Creation\Interface\ISalesInvoiceBuilder.cs" />
-    <Compile Include="Domain\Creation\Interface\ISalesOrderBuilder.cs" />
-    <Compile Include="Domain\Creation\Interface\IShipmentBuilder.cs" />
-    <Compile Include="Domain\Creation\ShipmentBuilder.cs" />
-    <Compile Include="Domain\Creation\SalesInvoiceBuilder.cs" />
-    <Compile Include="Domain\Creation\SalesOrderBuilder.cs" />
-    <Compile Include="Domain\Customer.cs" />
-    <Compile Include="Domain\Interface\ICompany.cs" />
-    <Compile Include="Domain\Interface\ICustomer.cs" />
-    <Compile Include="Domain\Interface\ISalesInvoice.cs" />
-    <Compile Include="Domain\Interface\ISalesInvoiceLine.cs" />
-    <Compile Include="Domain\Interface\ISalesOrder.cs" />
-    <Compile Include="Domain\Interface\ISalesOrderLine.cs" />
-    <Compile Include="Domain\Interface\IShipment.cs" />
-    <Compile Include="Domain\Interface\IShipmentLine.cs" />
-    <Compile Include="Domain\Interface\IWarehouseProduct.cs" />
-    <Compile Include="Domain\SalesInvoice.cs" />
-    <Compile Include="Domain\SalesInvoiceLine.cs" />
-    <Compile Include="Domain\SalesOrder.cs" />
-    <Compile Include="Domain\SalesOrderLine.cs" />
-    <Compile Include="Domain\SalesOrderLineStates\Interface\ISalesOrderLineState.cs" />
-    <Compile Include="Domain\SalesOrderLineStates\SalesOrderLineClosedState.cs" />
-    <Compile Include="Domain\SalesOrderLineStates\SalesOrderLineOpenState.cs" />
-    <Compile Include="Domain\SalesOrderStates\Interface\ISalesOrderState.cs" />
-    <Compile Include="Domain\SalesOrderStates\SalesOrderCompletedState.cs" />
-    <Compile Include="Domain\SalesOrderStates\SalesOrderDeletedState.cs" />
-    <Compile Include="Domain\SalesOrderStates\SalesOrderParkedState.cs" />
-    <Compile Include="Domain\Shipment.cs" />
-    <Compile Include="Domain\ShipmentLine.cs" />
-    <Compile Include="Domain\WarehouseProduct.cs" />
+    <Compile Include="CommandDomain\Company.cs" />
+    <Compile Include="CommandDomain\Creation\CustomerBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\Interface\ICustomerBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\Interface\ISalesInvoiceBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\Interface\ISalesOrderBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\Interface\IShipmentBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\ShipmentBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\SalesInvoiceBuilder.cs" />
+    <Compile Include="CommandDomain\Creation\SalesOrderBuilder.cs" />
+    <Compile Include="CommandDomain\Customer.cs" />
+    <Compile Include="CommandDomain\Interface\ICompany.cs" />
+    <Compile Include="CommandDomain\Interface\ICustomer.cs" />
+    <Compile Include="CommandDomain\Interface\ISalesInvoice.cs" />
+    <Compile Include="CommandDomain\Interface\ISalesInvoiceLine.cs" />
+    <Compile Include="CommandDomain\Interface\ISalesOrder.cs" />
+    <Compile Include="CommandDomain\Interface\ISalesOrderLine.cs" />
+    <Compile Include="CommandDomain\Interface\IShipment.cs" />
+    <Compile Include="CommandDomain\Interface\IShipmentLine.cs" />
+    <Compile Include="CommandDomain\Interface\IWarehouseProduct.cs" />
+    <Compile Include="CommandDomain\SalesInvoice.cs" />
+    <Compile Include="CommandDomain\SalesInvoiceLine.cs" />
+    <Compile Include="CommandDomain\SalesOrder.cs" />
+    <Compile Include="CommandDomain\SalesOrderLine.cs" />
+    <Compile Include="CommandDomain\SalesOrderLineStates\Interface\ISalesOrderLineState.cs" />
+    <Compile Include="CommandDomain\SalesOrderLineStates\SalesOrderLineClosedState.cs" />
+    <Compile Include="CommandDomain\SalesOrderLineStates\SalesOrderLineOpenState.cs" />
+    <Compile Include="CommandDomain\SalesOrderStates\Interface\ISalesOrderState.cs" />
+    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderCompletedState.cs" />
+    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderDeletedState.cs" />
+    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderParkedState.cs" />
+    <Compile Include="CommandDomain\Shipment.cs" />
+    <Compile Include="CommandDomain\ShipmentLine.cs" />
+    <Compile Include="CommandDomain\WarehouseProduct.cs" />
+    <Compile Include="SalesQueries.cs" />
     <Compile Include="Services\Builders\Interface\ISalesOrderVmBuilder.cs" />
     <Compile Include="Services\Builders\SalesOrderVmBuilder.cs" />
     <Compile Include="Services\ModelBuilders\AddressVmModelBuilder.cs" />
@@ -91,7 +92,7 @@
     <Compile Include="Services\ModelBuilders\Interface\ISalesOrderVmModelBuilder.cs" />
     <Compile Include="Services\ModelBuilders\SalesOrderVmModelBuilder.cs" />
     <Compile Include="Services\ModelBuilders\SalesTaxVmModelBuilder.cs" />
-    <Compile Include="Transactions\SalesTransactions.cs" />
+    <Compile Include="SalesCommands.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
@@ -116,10 +117,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Domain\SalesInvoiceLineStates\" />
-    <Folder Include="Domain\SalesInvoiceStates\" />
-    <Folder Include="Domain\ShipmentLineStates\" />
-    <Folder Include="Domain\ShipmentStates\" />
+    <Folder Include="CommandDomain\SalesInvoiceLineStates\" />
+    <Folder Include="CommandDomain\SalesInvoiceStates\" />
+    <Folder Include="CommandDomain\ShipmentLineStates\" />
+    <Folder Include="CommandDomain\ShipmentStates\" />
+    <Folder Include="QueryDomain\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

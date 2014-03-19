@@ -45,19 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\BaseCreditTests.cs" />
-    <Compile Include="Domain\BaseCreditLineTests.cs" />
-    <Compile Include="Domain\CompanyTests.cs" />
-    <Compile Include="Domain\CreditTests.cs" />
-    <Compile Include="Domain\CreditFactoryTests.cs" />
-    <Compile Include="Domain\CreditLineTests.cs" />
-    <Compile Include="Domain\CustomerTests.cs" />
-    <Compile Include="Domain\FreeCreditTests.cs" />
-    <Compile Include="Domain\FreeCreditLineTests.cs" />
-    <Compile Include="Domain\SalesInvoiceTests.cs" />
-    <Compile Include="Domain\SalesInvoiceLineTests.cs" />
+    <Compile Include="CommandDomain\BaseCreditTests.cs" />
+    <Compile Include="CommandDomain\BaseCreditLineTests.cs" />
+    <Compile Include="CommandDomain\CompanyTests.cs" />
+    <Compile Include="CommandDomain\CreditTests.cs" />
+    <Compile Include="CommandDomain\CreditFactoryTests.cs" />
+    <Compile Include="CommandDomain\CreditLineTests.cs" />
+    <Compile Include="CommandDomain\CustomerTests.cs" />
+    <Compile Include="CommandDomain\FreeCreditTests.cs" />
+    <Compile Include="CommandDomain\FreeCreditLineTests.cs" />
+    <Compile Include="CommandDomain\SalesInvoiceTests.cs" />
+    <Compile Include="CommandDomain\SalesInvoiceLineTests.cs" />
+    <Compile Include="CreditQueriesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transactions\CreditTransactionsTests.cs" />
+    <Compile Include="CreditCommandsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Application.Credits\Inventory.Application.Credits.csproj">
@@ -68,6 +69,9 @@
       <Project>{7EB4A57D-95AA-4B7E-97EC-18CDAD414212}</Project>
       <Name>Inventory.Repository.Base.Contracts</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Transactions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

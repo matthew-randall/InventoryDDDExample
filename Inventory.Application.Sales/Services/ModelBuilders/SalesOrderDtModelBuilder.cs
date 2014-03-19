@@ -1,5 +1,5 @@
 ﻿using System;
-using Inventory.Application.Sales.Domain.Interface;
+using Inventory.Application.Sales.CommandDomain.Interface;
 using Inventory.Application.Sales.Services.ModelBuilders.Interface;
 using Inventory.Repository.Base.Contracts.Enum;
 using Inventory.Repository.Base.Contracts.Models;

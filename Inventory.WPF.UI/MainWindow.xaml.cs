@@ -18,7 +18,7 @@ namespace Inventory.WPF.UI
         }
 
         [Inject]
-        public ISalesTransactions SalesTransactions { get; set; }
+        public ISalesCommands SalesCommands { get; set; }
 
         private void btnAddSalesOrder_Click(object sender, RoutedEventArgs e)
         {
@@ -41,7 +41,7 @@ namespace Inventory.WPF.UI
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             var customerCode = txtCustomerCode.Text;
-            var salesOrderId = SalesTransactions.AddNewSalesOrder(customerCode);
+            var salesOrderId = SalesCommands.AddNewSalesOrder(customerCode);
             PageFrame.Navigate(new SalesOrderUpdate(salesOrderId));
         }
     }

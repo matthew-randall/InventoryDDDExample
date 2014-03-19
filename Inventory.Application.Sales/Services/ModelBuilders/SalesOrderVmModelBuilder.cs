@@ -1,6 +1,6 @@
 ﻿using System;
 using Inventory.Application.Sales.Contracts.Models;
-using Inventory.Application.Sales.Domain.Interface;
+using Inventory.Application.Sales.CommandDomain.Interface;
 using Inventory.Application.Sales.Services.ModelBuilders.Interface;
 
 namespace Inventory.Application.Sales.Services.ModelBuilders

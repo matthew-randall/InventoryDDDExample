@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Sales
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Sales.Contracts", "Inventory.Application.Sales.Contracts\Inventory.Application.Sales.Contracts.csproj", "{613D9CCA-95D2-4C70-B25B-229B2F70476C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Sales.Test.Unit", "Inventory.Application.Sales.Test.Unit\Inventory.Application.Sales.Test.Unit.csproj", "{4A68A296-9FCF-485F-A698-ADD92245F011}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.Application.Sales.Tests.Unit", "Inventory.Application.Sales.Test.Unit\Inventory.Application.Sales.Tests.Unit.csproj", "{4A68A296-9FCF-485F-A698-ADD92245F011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
 using Inventory.Application.Sales.Contracts.Models;
-using Inventory.Application.Sales.Domain.Interface;
+using Inventory.Application.Sales.CommandDomain.Interface;
 using Inventory.Application.Sales.Services.ModelBuilders;
 
-namespace Inventory.Application.Sales.Test.Unit.Services.ModelBuilders
+namespace Inventory.Application.Sales.Tests.Unit.Services.ModelBuilders
 {
     [TestFixture]
     public class SalesOrderVmModelBuilderTests

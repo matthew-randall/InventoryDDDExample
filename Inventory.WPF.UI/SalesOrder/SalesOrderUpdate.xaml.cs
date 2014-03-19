@@ -22,11 +22,11 @@ namespace Inventory.WPF.UI.SalesOrder
         }
 
         [Inject]
-        public ISalesTransactions SalesTransactions { get; set; }
+        public ISalesCommands SalesCommands { get; set; }
 
         private void LoadPageModel(Guid salesOrderId)
         {
-            _salesOrder = SalesTransactions.GetSalesOrder(salesOrderId);
+            _salesOrder = SalesCommands.GetSalesOrder(salesOrderId);
         }
     }
 }

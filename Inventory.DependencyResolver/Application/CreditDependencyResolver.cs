@@ -1,6 +1,6 @@
-﻿using Ninject;
-using Inventory.Application.Credits.Contracts.Interface.Transactions;
-using Inventory.Application.Credits.Transactions;
+﻿using Inventory.Application.Credits;
+using Inventory.Application.Credits.Contracts.Interface;
+using Ninject;
 using Inventory.DependencyResolver.Interface;
 
 namespace Inventory.DependencyResolver.Application
@@ -16,7 +16,7 @@ namespace Inventory.DependencyResolver.Application
 
         public void Resolve()
         {
-            _kernel.Bind<ICreditTransactions>().To<CreditTransactions>();
+            _kernel.Bind<ICreditCommands>().To<CreditCommands>();
         }
     }
 }
