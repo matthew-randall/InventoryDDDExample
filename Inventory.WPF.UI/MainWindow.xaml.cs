@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Inventory.WPF.UI.Credits;
 using Ninject;
 using Inventory.Application.Sales.Contracts.Interfaces.Transactions;
 using Inventory.DependencyInjector;
@@ -43,6 +44,12 @@ namespace Inventory.WPF.UI
             var customerCode = txtCustomerCode.Text;
             var salesOrderId = SalesCommands.AddNewSalesOrder(customerCode);
             PageFrame.Navigate(new SalesOrderUpdate(salesOrderId));
+        }
+
+        private void btnViewCredits_Click(object sender, RoutedEventArgs e)
+        {
+            ViewCredits.Instance.Reload();
+            PageFrame.Navigate(ViewCredits.Instance);
         }
     }
 }

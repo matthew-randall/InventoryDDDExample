@@ -9,7 +9,7 @@
         <Button Name="btnViewSalesOrder" Content="View SalesOrders" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="107" Click="btnViewSalesOrder_Click"/>
         <Label Content="Credits" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Height="30" HorizontalContentAlignment="Stretch" RenderTransformOrigin="0.542,-0.289"/>
         <Button x:Name="btnAddCredit" Content="Add Credit" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="107"/>
-        <Button x:Name="btnViewCredits" Content="View Credits" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="107"/>
+        <Button x:Name="btnViewCredits" Content="View Credits" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="107" Click="btnViewCredits_Click"/>
         <Button x:Name="btnAddQuote" Content="Add Quote" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="107"/>
         <Button x:Name="btnViewQuotes" Content="View Quote" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="107"/>
 

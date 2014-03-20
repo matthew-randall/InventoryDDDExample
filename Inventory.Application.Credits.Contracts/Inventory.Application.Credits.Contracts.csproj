@@ -48,6 +48,12 @@
     <Compile Include="Interface\ICreditCommands.cs" />
     <Compile Include="Queries\CreditViewQuery.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Application.Base.Contacts\Inventory.Application.Base.Contacts.csproj">
+      <Project>{8023796F-60BA-45F4-B2F1-721FF0D9DC44}</Project>
+      <Name>Inventory.Application.Base.Contacts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

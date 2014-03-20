@@ -56,12 +56,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Credits\ViewCredits.xaml.cs">
+      <DependentUpon>ViewCredits.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SalesOrder\SalesOrderUpdate.xaml.cs">
       <DependentUpon>SalesOrderUpdate.xaml</DependentUpon>
     </Compile>
     <Compile Include="SalesOrder\ViewSalesOrders.xaml.cs">
       <DependentUpon>ViewSalesOrders.xaml</DependentUpon>
     </Compile>
+    <Page Include="Credits\ViewCredits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

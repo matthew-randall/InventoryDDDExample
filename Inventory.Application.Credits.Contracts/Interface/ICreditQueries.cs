@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Inventory.Application.Credits.Contracts.Queries;
 
 namespace Inventory.Application.Credits.Contracts.Interface
 {
     public interface ICreditQueries
     {
+        List<CreditViewQuery> GetCreditViewList(int pageSize);
     }
 }

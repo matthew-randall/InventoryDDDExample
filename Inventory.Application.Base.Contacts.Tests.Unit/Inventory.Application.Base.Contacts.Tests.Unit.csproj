@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BBB0BD5-D82D-46F9-9BF5-4701229A9B82}</ProjectGuid>
+    <ProjectGuid>{E4D13C7F-8DE0-44A1-841C-62BCDD9EEF9E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Inventory.Application.Credits.Tests.Unit</RootNamespace>
-    <AssemblyName>Inventory.Application.Credits.Tests.Unit</AssemblyName>
+    <RootNamespace>Inventory.Application.Base.Contacts.Tests.Unit</RootNamespace>
+    <AssemblyName>Inventory.Application.Base.Contacts.Tests.Unit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,53 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandDomain\BaseCreditTests.cs" />
-    <Compile Include="CommandDomain\BaseCreditLineTests.cs" />
-    <Compile Include="CommandDomain\CompanyTests.cs" />
-    <Compile Include="CommandDomain\CreditTests.cs" />
-    <Compile Include="CommandDomain\CreditFactoryTests.cs" />
-    <Compile Include="CommandDomain\CreditLineTests.cs" />
-    <Compile Include="CommandDomain\CustomerTests.cs" />
-    <Compile Include="CommandDomain\FreeCreditTests.cs" />
-    <Compile Include="CommandDomain\FreeCreditLineTests.cs" />
-    <Compile Include="CommandDomain\SalesInvoiceTests.cs" />
-    <Compile Include="CommandDomain\SalesInvoiceLineTests.cs" />
-    <Compile Include="CreditQueriesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CreditCommandsTests.cs" />
-    <Compile Include="QueryDomain\CreditLineViewTests.cs" />
-    <Compile Include="QueryDomain\CreditViewBuilderTests.cs" />
-    <Compile Include="QueryDomain\CreditViewTests.cs" />
-    <Compile Include="Services\ModelBuilders\CreditViewQueryModelBuilderTests.cs" />
+    <Compile Include="Structs\CurrencyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inventory.Application.Base.Contacts\Inventory.Application.Base.Contacts.csproj">
-      <Project>{8023796f-60ba-45f4-b2f1-721ff0d9dc44}</Project>
+      <Project>{8023796F-60BA-45F4-B2F1-721FF0D9DC44}</Project>
       <Name>Inventory.Application.Base.Contacts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Credits.Contracts\Inventory.Application.Credits.Contracts.csproj">
-      <Project>{823968d1-405b-4250-91ae-f4c8b4233c45}</Project>
-      <Name>Inventory.Application.Credits.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Credits\Inventory.Application.Credits.csproj">
-      <Project>{EAF8526B-8700-4EDB-A1F1-781186AA217D}</Project>
-      <Name>Inventory.Application.Credits</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.DependencyInjector\Inventory.DependencyInjector.csproj">
-      <Project>{CDFDB3CA-8AFA-4E35-A784-7F24C937E1A4}</Project>
-      <Name>Inventory.DependencyInjector</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Repository.Base.Contracts\Inventory.Repository.Base.Contracts.csproj">
-      <Project>{7EB4A57D-95AA-4B7E-97EC-18CDAD414212}</Project>
-      <Name>Inventory.Repository.Base.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Repository.Credits.Contracts\Inventory.Repository.Credits.Contracts.csproj">
-      <Project>{18BDDB8D-1240-44D8-B39C-B01C7C066536}</Project>
-      <Name>Inventory.Repository.Credits.Contracts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Transactions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

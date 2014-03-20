@@ -17,6 +17,7 @@ namespace Inventory.DependencyResolver.Application
         public void Resolve()
         {
             _kernel.Bind<ICreditCommands>().To<CreditCommands>();
+            _kernel.Bind<ICreditQueries>().To<CreditQueries>();
         }
     }
 }
