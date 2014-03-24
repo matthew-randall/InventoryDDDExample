@@ -1,13 +1,13 @@
-﻿using Inventory.Application.Companies.Contracts.Model.Sales;
+﻿using Inventory.Application.Companies.Sales.Contracts.Model;
 using Inventory.Application.Sales.SalesOrders.CommandDomain.Interface;
 
 namespace Inventory.Application.Sales.SalesOrders.CommandDomain
 {
     internal class Company : ICompany
     {
-        private readonly CompanySettings _company;
+        private readonly SalesSettings _company;
 
-        public Company(CompanySettings company)
+        public Company(SalesSettings company)
         {
             _company = company;
         }

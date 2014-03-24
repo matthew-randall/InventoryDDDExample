@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Inventory.UI.Sales.Contracts.Interfaces.Transactions;
+using Inventory.UI.Sales.Contracts;
 using Inventory.WPF.UI.Credits;
 using Inventory.WPF.UI.Credits.EventArguments;
 using Ninject;
@@ -21,7 +21,7 @@ namespace Inventory.WPF.UI
         }
 
         [Inject]
-        public ISalesCommands SalesCommands { get; set; }
+        public IAddNewSalesOrder AddNewSales { get; set; }
 
         private void btnAddSalesOrder_Click(object sender, RoutedEventArgs e)
         {
@@ -44,7 +44,7 @@ namespace Inventory.WPF.UI
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             var customerCode = txtCustomerCode.Text;
-            var salesOrderId = SalesCommands.AddNewSalesOrder(customerCode);
+            var salesOrderId = AddNewSales.Add(customerCode);
             PageFrame.Navigate(new SalesOrderUpdate(salesOrderId));
         }
 

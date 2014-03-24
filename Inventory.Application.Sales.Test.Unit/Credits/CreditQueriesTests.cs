@@ -62,14 +62,14 @@ namespace Inventory.Application.Sales.Tests.Unit.Credits
         [Test]
         public void GetCreditViewList_Test01_QueryDatabase()
         {
-            _creditQueries.GetCreditViewList(10);
+            _creditQueries.Get(10);
             _mockedCreditRetriever.Verify(x => x.GetCreditsView(10), Times.Once);
         }
 
         [Test]
         public void GetCreditViewList_Test02_BuildDomain()
         {
-            _creditQueries.GetCreditViewList(10);
+            _creditQueries.Get(10);
             _mockedCreditViewBuilder.Verify(x => x.Get(_creditViewDts), Times.Once);
         }
 
@@ -84,7 +84,7 @@ namespace Inventory.Application.Sales.Tests.Unit.Credits
             _creditView2.Setup(x => x.GetCreditViewQuery()).Returns(creditViewQuery2);
             _creditView3.Setup(x => x.GetCreditViewQuery()).Returns(creditViewQuery3);
 
-            var results = _creditQueries.GetCreditViewList(10);
+            var results = _creditQueries.Get(10);
 
             Assert.That(results[0] == creditViewQuery1);
             Assert.That(results[1] == creditViewQuery2);

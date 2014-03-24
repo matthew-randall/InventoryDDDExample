@@ -1,6 +1,5 @@
-﻿using Inventory.Application.Sales;
-using Inventory.Application.Sales.SalesOrders;
-using Inventory.UI.Sales.Contracts.Interfaces.Transactions;
+﻿using Inventory.Application.Sales.SalesOrders;
+using Inventory.UI.Sales.Contracts;
 using Ninject;
 using Inventory.DependencyResolver.Interface;
 
@@ -17,7 +16,7 @@ namespace Inventory.DependencyResolver.Application
 
         public void Resolve()
         {
-            _kernel.Bind<ISalesCommands>().To<SalesCommands>();
+            _kernel.Bind<IGetSalesOrderVm>().To<SalesCommands>();
         }
     }
 }

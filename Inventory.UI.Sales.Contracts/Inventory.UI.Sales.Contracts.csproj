@@ -43,10 +43,11 @@
     <Compile Include="Credits\Commands\CreditViewCommand.cs" />
     <Compile Include="Credits\Commands\SalesInvoiceLineViewCommand.cs" />
     <Compile Include="Credits\Commands\SalesInvoiceViewCommand.cs" />
-    <Compile Include="Credits\Interface\ICreditCommands.cs" />
-    <Compile Include="Credits\Interface\ICreditQueries.cs" />
     <Compile Include="Credits\Queries\CreditViewQuery.cs" />
-    <Compile Include="Interfaces\Transactions\SalesTransactions.cs" />
+    <Compile Include="IAddNewSalesOrder.cs" />
+    <Compile Include="IGetCreditView.cs" />
+    <Compile Include="IGetCreditViewList.cs" />
+    <Compile Include="IGetSalesOrderVm.cs" />
     <Compile Include="Models\AddressVm.cs" />
     <Compile Include="Models\CompanyFeaturesVm.cs" />
     <Compile Include="Models\CurrencyVm.cs" />

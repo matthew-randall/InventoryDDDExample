@@ -1,10 +1,10 @@
-﻿using Inventory.Application.Sales.SalesOrders.CommandDomain.Creation;
+﻿using Inventory.Application.Companies.Sales.Contracts;
+using Inventory.Application.Companies.Sales.Contracts.Model;
+using Inventory.Application.Sales.SalesOrders.CommandDomain.Creation;
 using Inventory.Application.Sales.SalesOrders.CommandDomain.Interface;
 using Inventory.DependencyInjector;
 using Inventory.Repository.Base.Contracts.Models;
 using Inventory.Repository.Sales.Contracts.Interface;
-using Inventory.Application.Companies.Contracts.Interface.Sales;
-using Inventory.Application.Companies.Contracts.Model.Sales;
 using Moq;
 using Ninject;
 using NUnit.Framework;
@@ -17,26 +17,26 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders.CommandDomain.Creat
         private Mock<CustomerBuilder> _mockedCustomerBuilder;
         private Mock<ICompany> _mockedCompany;
         private Mock<ICustomer> _mockedCustomer;
-        private Mock<ICompanySalesTransactions> _mockedCompanySalesTransactions;
+        private Mock<IGetSalesSettings> _mockedCompanySalesTransactions;
         private Mock<ICustomerRetriever> _mockedCustomerRetriever;
 
         private CustomerBuilder _customerBuilder;
         private CustomerDt _customerDt;
-        private CompanySettings _companySettings;
+        private SalesSettings _companySettings;
 
         [SetUp]
         public void SetUp()
         {
             _customerDt = new CustomerDt();
-            _companySettings = new CompanySettings();
+            _companySettings = new SalesSettings();
 
             _mockedCompany = new Mock<ICompany>();
             _mockedCustomer = new Mock<ICustomer>();
 
-            _mockedCompanySalesTransactions = new Mock<ICompanySalesTransactions>();
+            _mockedCompanySalesTransactions = new Mock<IGetSalesSettings>();
             _mockedCustomerRetriever = new Mock<ICustomerRetriever>();
 
-            _mockedCompanySalesTransactions.Setup(x => x.GetCompanySettings()).Returns(_companySettings);
+            _mockedCompanySalesTransactions.Setup(x => x.Get()).Returns(_companySettings);
             _mockedCustomerRetriever.Setup(x => x.GetCustomer(It.IsAny<string>())).Returns(_customerDt);
             
             _mockedCustomerBuilder = new Mock<CustomerBuilder>();
@@ -47,7 +47,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders.CommandDomain.Creat
 
             IKernel kernel = new StandardKernel();
 
-            kernel.Bind<ICompanySalesTransactions>().ToConstant(_mockedCompanySalesTransactions.Object);
+            kernel.Bind<IGetSalesSettings>().ToConstant(_mockedCompanySalesTransactions.Object);
             kernel.Bind<ICustomerRetriever>().ToConstant(_mockedCustomerRetriever.Object);
 
             NinjectDependencyInjector.Instance.Initialize(kernel);

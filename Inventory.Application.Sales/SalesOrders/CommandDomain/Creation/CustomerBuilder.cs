@@ -1,10 +1,10 @@
-﻿using Inventory.Application.Sales.SalesOrders.CommandDomain.Creation.Interface;
+﻿using Inventory.Application.Companies.Sales.Contracts;
+using Inventory.Application.Companies.Sales.Contracts.Model;
+using Inventory.Application.Sales.SalesOrders.CommandDomain.Creation.Interface;
 using Inventory.Application.Sales.SalesOrders.CommandDomain.Interface;
 using Inventory.DependencyInjector;
 using Inventory.Repository.Base.Contracts.Models;
 using Inventory.Repository.Sales.Contracts.Interface;
-using Inventory.Application.Companies.Contracts.Interface.Sales;
-using Inventory.Application.Companies.Contracts.Model.Sales;
 using Ninject;
 
 namespace Inventory.Application.Sales.SalesOrders.CommandDomain.Creation
@@ -18,14 +18,14 @@ namespace Inventory.Application.Sales.SalesOrders.CommandDomain.Creation
         }
 
         [Inject]
-        public ICompanySalesTransactions CompanySalesTransactions { get; set; }
+        public IGetSalesSettings CompanySalesTransactions { get; set; }
 
         [Inject]
         public ICustomerRetriever CustomerRetriever { get; set; }
 
         public ICustomer GetCustomer(string customerCode)
         {
-            var companyDt = CompanySalesTransactions.GetCompanySettings();
+            var companyDt = CompanySalesTransactions.Get();
             var customerDt = CustomerRetriever.GetCustomer(customerCode);
 
             var company = InstantiateCompany(companyDt);
@@ -34,7 +34,7 @@ namespace Inventory.Application.Sales.SalesOrders.CommandDomain.Creation
             return customer;
         }
 
-        internal virtual ICompany InstantiateCompany(CompanySettings company)
+        internal virtual ICompany InstantiateCompany(SalesSettings company)
         {
             return new Company(company);
         }

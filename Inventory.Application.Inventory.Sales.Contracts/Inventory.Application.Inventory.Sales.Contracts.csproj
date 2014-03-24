@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAddReturnedStock.cs" />
+    <Compile Include="IAllocateStock.cs" />
+    <Compile Include="IDeallocateStock.cs" />
+    <Compile Include="IShipStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

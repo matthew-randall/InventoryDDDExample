@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Inventory.Helpers.Enum;
+using Inventory.UI.Sales.Contracts;
 using Inventory.UI.Sales.Contracts.Credits.Commands;
-using Inventory.UI.Sales.Contracts.Credits.Interface;
 
 namespace Inventory.Application.Sales.Credits
 {
-    public class CreditCommands : ICreditCommands
+    public class CreditCommands : IGetCreditView
     {
-        public CreditViewCommand GetCreditView(Guid creditId)
+        public CreditViewCommand Get(Guid creditId)
         {
             return new CreditViewCommand
             {

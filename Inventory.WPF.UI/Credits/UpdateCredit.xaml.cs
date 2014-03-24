@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using Inventory.DependencyInjector;
-using Inventory.UI.Sales.Contracts.Credits.Interface;
+using Inventory.UI.Sales.Contracts;
 using Ninject;
 
 namespace Inventory.WPF.UI.Credits
@@ -26,11 +24,11 @@ namespace Inventory.WPF.UI.Credits
         }
 
         [Inject]
-        public ICreditCommands CreditCommands { get; set; }
+        public IGetCreditView GetCredit { get; set; }
         
         public void SetCredit(Guid creditId)
         {
-            var pageModel = CreditCommands.GetCreditView(creditId);
+            var pageModel = GetCredit.Get(creditId);
             this.DataContext = pageModel;
         }
     }

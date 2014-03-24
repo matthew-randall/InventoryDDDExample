@@ -1,4 +1,4 @@
-﻿using Inventory.Application.Companies.Contracts.Interface.Sales;
+﻿using Inventory.Application.Companies.Sales.Contracts;
 using Ninject;
 using Inventory.Application.Companies.Transactions;
 using Inventory.DependencyResolver.Interface;
@@ -16,7 +16,7 @@ namespace Inventory.DependencyResolver.Application
 
         public void Resolve()
         {
-            _kernel.Bind<ICompanySalesTransactions>().To<CompanyTransactions>();
+            _kernel.Bind<IGetSalesSettings>().To<CompanyTransactions>();
         }
     }
 }

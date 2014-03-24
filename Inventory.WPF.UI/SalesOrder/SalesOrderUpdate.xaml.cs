@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Controls;
-using Inventory.UI.Sales.Contracts.Interfaces.Transactions;
+using Inventory.UI.Sales.Contracts;
 using Inventory.UI.Sales.Contracts.Models;
 using Ninject;
 using Inventory.DependencyInjector;
@@ -22,11 +22,11 @@ namespace Inventory.WPF.UI.SalesOrder
         }
 
         [Inject]
-        public ISalesCommands SalesCommands { get; set; }
+        public IGetSalesOrderVm GetSalesOrder { get; set; }
 
         private void LoadPageModel(Guid salesOrderId)
         {
-            _salesOrder = SalesCommands.GetSalesOrder(salesOrderId);
+            _salesOrder = GetSalesOrder.Get(salesOrderId);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System;
-using Inventory.Application.Companies.Contracts.Interface.Sales;
+using Inventory.Application.Companies.Sales.Contracts;
 using Inventory.Application.Sales.SalesOrders;
 using Inventory.Application.Sales.SalesOrders.CommandDomain.Creation.Interface;
 using Inventory.Application.Sales.SalesOrders.CommandDomain.Interface;
@@ -20,7 +20,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         private SalesCommands _salesCommands;
         private Mock<ICustomer> _mockedCustomer;
         private Mock<ICustomerRetriever> _mockedCustomerRetriever;
-        private Mock<ICompanySalesTransactions> _mockedCompanyRetriever;
+        private Mock<IGetSalesSettings> _mockedCompanyRetriever;
         private Mock<ISalesOrderPersistor> _mockedSalesOrderPersistor;
         private Mock<ISalesOrder> _mockedSalesOrder;
 
@@ -28,7 +28,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         public void SetUp()
         {
             _mockedCustomerRetriever = new Mock<ICustomerRetriever>();
-            _mockedCompanyRetriever = new Mock<ICompanySalesTransactions>();
+            _mockedCompanyRetriever = new Mock<IGetSalesSettings>();
             _mockedSalesOrderPersistor = new Mock<ISalesOrderPersistor>();
 
             _mockedSalesOrderBuilder = new Mock<ISalesOrderBuilder>();
@@ -53,7 +53,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         [Test]
         public void AddNewSalesOrder_Test01_GetCustomerBuilder()
         {
-            _salesCommands.AddNewSalesOrder("CUST01");
+            _salesCommands.Add("CUST01");
 
             _mockedSalesTransaction.Verify(
                 x => x.InstantiateCustomerBuilder(),
@@ -63,7 +63,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         [Test]
         public void AddNewSalesOrder_Test02_GetCustomer()
         {
-            _salesCommands.AddNewSalesOrder("CUST01");
+            _salesCommands.Add("CUST01");
 
             _mockedCustomerBuilder.Verify(x => x.GetCustomer("CUST01"), Times.Once);
         }
@@ -71,7 +71,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         [Test]
         public void AddNewSalesOrder_Test03_GetSalesOrderBuilder()
         {
-            _salesCommands.AddNewSalesOrder("CUST01");
+            _salesCommands.Add("CUST01");
 
             _mockedSalesTransaction.Verify(x => x.InstantiateSalesOrderBuilder(), Times.Once());
         }
@@ -79,7 +79,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         [Test]
         public void AddNewSalesOrder_Test04_CreateSalesOrder()
         {
-            _salesCommands.AddNewSalesOrder("CUST01");
+            _salesCommands.Add("CUST01");
 
             _mockedSalesOrderBuilder.Verify(x => x.CreateSalesOrder(_mockedCustomer.Object), Times.Once);
         }
@@ -90,7 +90,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
             var guid = Guid.NewGuid();
             _mockedSalesOrderBuilder.Setup(x => x.CreateSalesOrder(_mockedCustomer.Object)).Returns(guid);
             
-            var salesOrderId = _salesCommands.AddNewSalesOrder("CUST01");
+            var salesOrderId = _salesCommands.Add("CUST01");
 
             Assert.That(salesOrderId, Is.EqualTo(guid));
         }
@@ -98,7 +98,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         [Test]
         public void GetSalesOrder_Test01_InstantiateSalesOrderBuilder()
         {
-            _salesCommands.GetSalesOrder(Guid.NewGuid());
+            _salesCommands.Get(Guid.NewGuid());
 
             _mockedSalesTransaction.Verify(x => x.InstantiateSalesOrderBuilder(), Times.Once);
         }
@@ -107,7 +107,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
         public void GetSalesOrder_Test02_GetSalesOrder()
         {
             var guid = Guid.NewGuid();
-            _salesCommands.GetSalesOrder(guid);
+            _salesCommands.Get(guid);
 
             _mockedSalesOrderBuilder.Verify(x => x.GetSalesOrder(guid), Times.Once);
         }
@@ -118,7 +118,7 @@ namespace Inventory.Application.Sales.Tests.Unit.SalesOrders
             var expected = new SalesOrderVm();
             _mockedSalesOrder.Setup(x => x.GetSalesOrderVm()).Returns(expected);
 
-            var actual = _salesCommands.GetSalesOrder(Guid.NewGuid());
+            var actual = _salesCommands.Get(Guid.NewGuid());
 
             Assert.That(actual == expected);
         }

@@ -1,13 +1,13 @@
-﻿using Inventory.Application.Companies.Contracts.Interface.Sales;
-using Inventory.Application.Companies.Contracts.Model.Sales;
+﻿using Inventory.Application.Companies.Sales.Contracts;
+using Inventory.Application.Companies.Sales.Contracts.Model;
 
 namespace Inventory.Application.Companies.Transactions
 {
-    public class CompanyTransactions : ICompanySalesTransactions
+    public class CompanyTransactions : IGetSalesSettings
     {
-        public CompanySettings GetCompanySettings()
+        public SalesSettings Get()
         {
-            return new CompanySettings();
+            return new SalesSettings();
         }
     }
 }

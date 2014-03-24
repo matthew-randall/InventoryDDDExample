@@ -4,13 +4,13 @@ using Inventory.Application.Sales.Credits.QueryDomain;
 using Inventory.Application.Sales.Credits.QueryDomain.Interfaces;
 using Inventory.DependencyInjector;
 using Inventory.Repository.Sales.Contracts.Interface;
-using Inventory.UI.Sales.Contracts.Credits.Interface;
+using Inventory.UI.Sales.Contracts;
 using Inventory.UI.Sales.Contracts.Credits.Queries;
 using Ninject;
 
 namespace Inventory.Application.Sales.Credits
 {
-    public class CreditQueries : ICreditQueries
+    public class CreditQueries : IGetCreditViewList
     {
         public CreditQueries()
         {
@@ -20,7 +20,7 @@ namespace Inventory.Application.Sales.Credits
         [Inject]
         public ICreditRetriever CreditRetriever { get; set; }
 
-        public List<CreditViewQuery> GetCreditViewList(int pageSize)
+        public List<CreditViewQuery> Get(int pageSize)
         {
             var queryResults = CreditRetriever.GetCreditsView(pageSize);
             var creditViews = InstantiateCreditViewBuilder().Get(queryResults);

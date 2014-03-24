@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\Sales\ICompanySalesTransactions.cs" />
-    <Compile Include="Model\Sales\CompanySettings.cs" />
+    <Compile Include="IGetSalesSettings.cs" />
+    <Compile Include="Model\SalesSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

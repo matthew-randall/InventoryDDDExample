@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using Inventory.DependencyInjector;
-using Inventory.UI.Sales.Contracts.Credits.Interface;
+using Inventory.UI.Sales.Contracts;
 using Inventory.UI.Sales.Contracts.Credits.Queries;
 using Inventory.WPF.UI.Credits.EventArguments;
 using Ninject;
@@ -27,11 +27,11 @@ namespace Inventory.WPF.UI.Credits
         }
 
         [Inject]
-        public ICreditQueries CreditQueries { get; set; }
+        public IGetCreditViewList CreditQueries { get; set; }
 
         public void Reload()
         {
-            tblCreditsView.ItemsSource = CreditQueries.GetCreditViewList(10);
+            tblCreditsView.ItemsSource = CreditQueries.Get(10);
         }
 
         private void BtnNavigateToCredit_OnClick(object sender, RoutedEventArgs e)
