@@ -1,0 +1,161 @@
+﻿<Page x:Class="Inventory.WPF.UI.Credits.UpdateCredit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Height="665" 
+      Width="884" 
+      d:DataContext="creditCommands:CreditViewCommand"
+	Title="UpdateCredit">
+
+    <Grid Height="665" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+        <Grid Height="228" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+
+            <Label Content="Credit - Credit Entry {Binding Credit Number} ({Binding CreditStatus})" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Height="62" Width="550"/>
+
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="120,99,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=CreditNumber}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,102,0,0" TextWrapping="Wrap" Text="Credit Number" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="120,131,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=CustomerCode}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="33,134,0,0" TextWrapping="Wrap" Text="Customer Code" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="120,166,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=CustomerName}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="29,169,0,0" TextWrapping="Wrap" Text="Customer Name" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="120,199,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=Email}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="87,202,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
+
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="420,99,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=CustomerCurrency}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="314,102,0,0" TextWrapping="Wrap" Text="Customer Currency" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="420,131,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=Reference}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="314,134,0,0" TextWrapping="Wrap" Text="Reference Number" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="420,166,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=CreditStatus}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="345,169,0,0" TextWrapping="Wrap" Text="Credit Status" VerticalAlignment="Top"/>
+
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="720,99,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=InvoiceNumber}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="637,105,0,0" TextWrapping="Wrap" Text="Order Number" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="720,131,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=InvoiceDate}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="619,137,0,0" TextWrapping="Wrap" Text="Sales Invoice Date" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="720,166,0,0" IsReadOnly="True" TextWrapping="Wrap" Text="{Binding Path=DeliveryDate}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="593,172,0,0" TextWrapping="Wrap" Text="Required Delivery Date" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="720,199,0,0" TextWrapping="Wrap" Text="{Binding Path=CreditDate}" VerticalAlignment="Top" Width="150"/>
+            <TextBlock HorizontalAlignment="Left" Margin="655,202,0,0" TextWrapping="Wrap" Text="Credit Date" VerticalAlignment="Top"/>
+
+        </Grid>
+        <Grid Height="437" Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            <DataGrid 
+                ItemsSource="{Binding Path=CreditLines}"
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top" 
+                Height="417" 
+                Width="864" 
+                AutoGenerateColumns="False" 
+                HorizontalContentAlignment="Stretch" 
+                VerticalContentAlignment="Stretch">
+                <DataGridTemplateColumn Header="" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Line" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=LineNumber}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Product Code" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=ProductCode}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Product Description" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=ProductDescription}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Invoice Quantity" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=InvoiceQuantity}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Invoice Price" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=InvoicePrice}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Credit Quantity" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=CreditQuantity}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Credit Price" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=CreditPrice}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Sub Total" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=SubTotal}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Tax Rate" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=TaxRate}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Return" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Comments" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Notes}"></TextBlock>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="Line" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid>
+        </Grid>
+    </Grid>
+
+</Page>

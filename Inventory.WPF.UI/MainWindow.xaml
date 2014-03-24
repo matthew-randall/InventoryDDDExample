@@ -26,6 +26,6 @@
             </Grid>
           </Border>
         </Popup>
-        <Frame Name="PageFrame"  HorizontalAlignment="Left" Height="665" Margin="122,63,0,0" VerticalAlignment="Top" Width="884" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+        <Frame Name="PageFrame" NavigationUIVisibility="Hidden"  HorizontalAlignment="Left" Height="665" Width="884" Margin="122,63,0,0" VerticalAlignment="Top"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
     </Grid>
 </Window>

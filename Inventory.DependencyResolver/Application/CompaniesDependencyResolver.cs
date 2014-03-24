@@ -1,5 +1,5 @@
-﻿using Ninject;
-using Inventory.Application.Companies.Contracts.Interface.Sales;
+﻿using Inventory.Application.Companies.Contracts.Interface.Sales;
+using Ninject;
 using Inventory.Application.Companies.Transactions;
 using Inventory.DependencyResolver.Interface;
 

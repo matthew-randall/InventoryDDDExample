@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Inventory.Repository.Base.Contracts.Enum;
+using Inventory.Helpers.Enum;
 
 namespace Inventory.Repository.Base.Contracts.Models
 {

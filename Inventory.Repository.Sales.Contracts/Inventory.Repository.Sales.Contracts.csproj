@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\ICreditRetriever.cs" />
     <Compile Include="Interface\ICustomerRetriever.cs" />
     <Compile Include="Interface\ISalesInvoiceRetriever.cs" />
     <Compile Include="Interface\ISalesOrderPersistor.cs" />

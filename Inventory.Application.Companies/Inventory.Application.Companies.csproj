@@ -43,9 +43,9 @@
     <Compile Include="Transactions\CompanyTransactions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
-      <Project>{7E3698AC-29A5-4AA5-BB8D-9349BB299C41}</Project>
-      <Name>Inventory.Application.Companies.Contracts</Name>
+    <ProjectReference Include="..\Inventory.Application.Companies.Sales.Contracts\Inventory.Application.Companies.Sales.Contracts.csproj">
+      <Project>{3948B406-2348-4A2F-9619-E60A18FB538B}</Project>
+      <Name>Inventory.Application.Companies.Sales.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

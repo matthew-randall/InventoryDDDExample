@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Controls;
+using Inventory.UI.Sales.Contracts.Interfaces.Transactions;
+using Inventory.UI.Sales.Contracts.Models;
 using Ninject;
-using Inventory.Application.Sales.Contracts.Interfaces.Transactions;
-using Inventory.Application.Sales.Contracts.Models;
 using Inventory.DependencyInjector;
 
 namespace Inventory.WPF.UI.SalesOrder

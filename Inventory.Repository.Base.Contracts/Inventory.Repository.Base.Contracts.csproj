@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\CreditStatus.cs" />
     <Compile Include="Enum\CreditType.cs" />
+    <Compile Include="Enum\CurrencyCode.cs" />
     <Compile Include="Enum\CustomerType.cs" />
     <Compile Include="Enum\SalesInvoiceStatus.cs" />
     <Compile Include="Enum\SalesOrderStatus.cs" />
@@ -67,6 +67,12 @@
     <Compile Include="Models\ShipmentDt.cs" />
     <Compile Include="Models\WarehouseDt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory.Helpers\Inventory.Helpers.csproj">
+      <Project>{4E5056F7-5B3E-4A24-9A48-5E36703B7F96}</Project>
+      <Name>Inventory.Helpers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

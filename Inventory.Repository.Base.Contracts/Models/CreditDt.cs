@@ -1,4 +1,5 @@
 ﻿using System;
+using Inventory.Helpers.Enum;
 using Inventory.Repository.Base.Contracts.Enum;
 
 namespace Inventory.Repository.Base.Contracts.Models

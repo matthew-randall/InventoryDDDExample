@@ -1,5 +1,5 @@
-﻿using Inventory.Application.Credits;
-using Inventory.Application.Credits.Contracts.Interface;
+﻿using Inventory.Application.Sales.Credits;
+using Inventory.UI.Sales.Contracts.Credits.Interface;
 using Ninject;
 using Inventory.DependencyResolver.Interface;
 

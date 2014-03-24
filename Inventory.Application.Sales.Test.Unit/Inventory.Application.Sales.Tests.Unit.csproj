@@ -49,42 +49,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandDomain\CompanyTests.cs" />
-    <Compile Include="CommandDomain\Creation\CustomerBuilderTests.cs" />
-    <Compile Include="CommandDomain\Creation\SalesInvoiceBuilderTests.cs" />
-    <Compile Include="CommandDomain\Creation\SalesOrderBuilderTests.cs" />
-    <Compile Include="CommandDomain\Creation\ShipmentBuilderTests.cs" />
-    <Compile Include="CommandDomain\CustomerTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderLineTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderLineStates\SalesOrderLineClosedStateTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderLineStates\SalesOrderLineOpenStateTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderCompletedStateTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderDeletedStateTests.cs" />
-    <Compile Include="CommandDomain\SalesOrderStates\SalesOrderParkedStateTests.cs" />
-    <Compile Include="CommandDomain\WarehouseProductTests.cs" />
-    <Compile Include="SalesQueriesTests.cs" />
-    <Compile Include="Services\Builders\SalesOrderVmBuilderTests.cs" />
-    <Compile Include="Services\ModelBuilders\AddressVmModelBuilderTests.cs" />
-    <Compile Include="Services\ModelBuilders\CompanyFeaturesVmModelBuilderTests.cs" />
-    <Compile Include="Services\ModelBuilders\CurrencyVmModelBuilderTests.cs" />
-    <Compile Include="Services\ModelBuilders\SalesOrderDtBuilderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\CompanyTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\Creation\CustomerBuilderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\Creation\SalesInvoiceBuilderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\Creation\SalesOrderBuilderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\Creation\ShipmentBuilderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\CustomerTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderLineTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderLineStates\SalesOrderLineClosedStateTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderLineStates\SalesOrderLineOpenStateTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderStates\SalesOrderCompletedStateTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderStates\SalesOrderDeletedStateTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\SalesOrderStates\SalesOrderParkedStateTests.cs" />
+    <Compile Include="SalesOrders\CommandDomain\WarehouseProductTests.cs" />
+    <Compile Include="Credits\CommandDomain\BaseCreditLineTests.cs" />
+    <Compile Include="Credits\CommandDomain\BaseCreditTests.cs" />
+    <Compile Include="Credits\CommandDomain\CompanyTests.cs" />
+    <Compile Include="Credits\CommandDomain\CreditFactoryTests.cs" />
+    <Compile Include="Credits\CommandDomain\CreditLineTests.cs" />
+    <Compile Include="Credits\CommandDomain\CreditTests.cs" />
+    <Compile Include="Credits\CommandDomain\CustomerTests.cs" />
+    <Compile Include="Credits\CommandDomain\FreeCreditLineTests.cs" />
+    <Compile Include="Credits\CommandDomain\FreeCreditTests.cs" />
+    <Compile Include="Credits\CommandDomain\SalesInvoiceLineTests.cs" />
+    <Compile Include="Credits\CommandDomain\SalesInvoiceTests.cs" />
+    <Compile Include="Credits\CreditCommandsTests.cs" />
+    <Compile Include="Credits\CreditQueriesTests.cs" />
+    <Compile Include="Credits\QueryDomain\CreditLineViewTests.cs" />
+    <Compile Include="Credits\QueryDomain\CreditViewBuilderTests.cs" />
+    <Compile Include="Credits\QueryDomain\CreditViewTests.cs" />
+    <Compile Include="Credits\Services\ModelBuilders\CreditViewQueryModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\SalesQueriesTests.cs" />
+    <Compile Include="SalesOrders\Services\Builders\SalesOrderVmBuilderTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\AddressVmModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\CompanyFeaturesVmModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\CurrencyVmModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\SalesOrderDtBuilderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ModelBuilders\SalesOrderVmModelBuilderTests.cs" />
-    <Compile Include="Services\ModelBuilders\SalesTaxVmModelBuilderTests.cs" />
-    <Compile Include="SalesCommandsTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\SalesOrderVmModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\Services\ModelBuilders\SalesTaxVmModelBuilderTests.cs" />
+    <Compile Include="SalesOrders\SalesCommandsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
-      <Project>{7E3698AC-29A5-4AA5-BB8D-9349BB299C41}</Project>
-      <Name>Inventory.Application.Companies.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Sales.Contracts\Inventory.Application.Sales.Contracts.csproj">
-      <Project>{613D9CCA-95D2-4C70-B25B-229B2F70476C}</Project>
-      <Name>Inventory.Application.Sales.Contracts</Name>
+    <ProjectReference Include="..\Inventory.Application.Companies.Sales.Contracts\Inventory.Application.Companies.Sales.Contracts.csproj">
+      <Project>{3948B406-2348-4A2F-9619-E60A18FB538B}</Project>
+      <Name>Inventory.Application.Companies.Sales.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Inventory.Application.Sales\Inventory.Application.Sales.csproj">
       <Project>{F0B88FC8-F88F-4045-9076-4086CC554C53}</Project>
@@ -94,6 +107,10 @@
       <Project>{CDFDB3CA-8AFA-4E35-A784-7F24C937E1A4}</Project>
       <Name>Inventory.DependencyInjector</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Inventory.Helpers\Inventory.Helpers.csproj">
+      <Project>{4E5056F7-5B3E-4A24-9A48-5E36703B7F96}</Project>
+      <Name>Inventory.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Inventory.Repository.Base.Contracts\Inventory.Repository.Base.Contracts.csproj">
       <Project>{7EB4A57D-95AA-4B7E-97EC-18CDAD414212}</Project>
       <Name>Inventory.Repository.Base.Contracts</Name>
@@ -102,6 +119,13 @@
       <Project>{709FAD54-9BD7-4DE9-B5F0-ACD2025E33C4}</Project>
       <Name>Inventory.Repository.Sales.Contracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Inventory.UI.Sales.Contracts\Inventory.UI.Sales.Contracts.csproj">
+      <Project>{613D9CCA-95D2-4C70-B25B-229B2F70476C}</Project>
+      <Name>Inventory.UI.Sales.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Credits\Transactions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

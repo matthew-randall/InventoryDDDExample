@@ -10,6 +10,8 @@ namespace Inventory.DependencyResolver
             var kernel = new StandardKernel();
 
             new Repository.SalesDependencyResolver(kernel).Resolve();
+            new Repository.CreditDependencyResolver(kernel).Resolve();
+
             new SalesDependencyResolver(kernel).Resolve();
             new CreditDependencyResolver(kernel).Resolve();
             new CompaniesDependencyResolver(kernel).Resolve();

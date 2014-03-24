@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using Inventory.Application.Credits.Contracts.Interface;
-using Inventory.Application.Credits.Contracts.Queries;
 using Inventory.DependencyInjector;
+using Inventory.UI.Sales.Contracts.Credits.Interface;
+using Inventory.UI.Sales.Contracts.Credits.Queries;
+using Inventory.WPF.UI.Credits.EventArguments;
 using Ninject;
 
 namespace Inventory.WPF.UI.Credits
@@ -33,5 +33,13 @@ namespace Inventory.WPF.UI.Credits
         {
             tblCreditsView.ItemsSource = CreditQueries.GetCreditViewList(10);
         }
+
+        private void BtnNavigateToCredit_OnClick(object sender, RoutedEventArgs e)
+        {
+            var creditView = ((FrameworkElement) sender).DataContext as CreditViewQuery;
+            OnSelectedCredit.Invoke(this, new OnSelectedCreditEventArgs(creditView.CreditId));
+        }
+
+        public event EventHandler<OnSelectedCreditEventArgs> OnSelectedCredit;
     }
 }

@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:creditView="clr-namespace:Inventory.Application.Credits.Contracts.Queries;assembly=Inventory.Application.Credits.Contracts"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="448.872"
 	Title="ViewCredits">
@@ -19,8 +18,8 @@
                 <DataGridTemplateColumn Header="Credit No." IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding CreditNumber}">
-                            </TextBlock>
+                            <Button Name="BtnNavigateToCredit"  Click="BtnNavigateToCredit_OnClick" Content="{Binding CreditNumber}">
+                            </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -59,7 +58,7 @@
                 <DataGridTemplateColumn Header="Status" IsReadOnly="True">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding CreditStatus}">
+                            <TextBlock Text="{Binding Status}">
                             </TextBlock>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

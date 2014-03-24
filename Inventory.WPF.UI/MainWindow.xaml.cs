@@ -1,7 +1,8 @@
 ﻿using System.Windows;
+using Inventory.UI.Sales.Contracts.Interfaces.Transactions;
 using Inventory.WPF.UI.Credits;
+using Inventory.WPF.UI.Credits.EventArguments;
 using Ninject;
-using Inventory.Application.Sales.Contracts.Interfaces.Transactions;
 using Inventory.DependencyInjector;
 using Inventory.WPF.UI.SalesOrder;
 
@@ -16,6 +17,7 @@ namespace Inventory.WPF.UI
         {
             InitializeComponent();
             NinjectDependencyInjector.Instance.InjectPropertiesOn(this);
+            ViewCredits.Instance.OnSelectedCredit += OnSelectCredit;
         }
 
         [Inject]
@@ -50,6 +52,12 @@ namespace Inventory.WPF.UI
         {
             ViewCredits.Instance.Reload();
             PageFrame.Navigate(ViewCredits.Instance);
+        }
+
+        private void OnSelectCredit(object sender, OnSelectedCreditEventArgs e)
+        {
+            UpdateCredit.Instance.SetCredit(e.CreditId);
+            PageFrame.Navigate(UpdateCredit.Instance);
         }
     }
 }

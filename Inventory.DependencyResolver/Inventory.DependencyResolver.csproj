@@ -48,28 +48,17 @@
     <Compile Include="Interface\IDependencyResolver.cs" />
     <Compile Include="NinjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CreditDependencyResolver.cs" />
     <Compile Include="Repository\SalesDependencyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory.Application.Companies.Contracts\Inventory.Application.Companies.Contracts.csproj">
-      <Project>{7E3698AC-29A5-4AA5-BB8D-9349BB299C41}</Project>
-      <Name>Inventory.Application.Companies.Contracts</Name>
+    <ProjectReference Include="..\Inventory.Application.Companies.Sales.Contracts\Inventory.Application.Companies.Sales.Contracts.csproj">
+      <Project>{3948B406-2348-4A2F-9619-E60A18FB538B}</Project>
+      <Name>Inventory.Application.Companies.Sales.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Inventory.Application.Companies\Inventory.Application.Companies.csproj">
       <Project>{196FF8C1-6B4E-44C5-9A10-779E917F4590}</Project>
       <Name>Inventory.Application.Companies</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Credits.Contracts\Inventory.Application.Credits.Contracts.csproj">
-      <Project>{823968D1-405B-4250-91AE-F4C8B4233C45}</Project>
-      <Name>Inventory.Application.Credits.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Credits\Inventory.Application.Credits.csproj">
-      <Project>{EAF8526B-8700-4EDB-A1F1-781186AA217D}</Project>
-      <Name>Inventory.Application.Credits</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Inventory.Application.Sales.Contracts\Inventory.Application.Sales.Contracts.csproj">
-      <Project>{613D9CCA-95D2-4C70-B25B-229B2F70476C}</Project>
-      <Name>Inventory.Application.Sales.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\Inventory.Application.Sales\Inventory.Application.Sales.csproj">
       <Project>{F0B88FC8-F88F-4045-9076-4086CC554C53}</Project>
@@ -82,6 +71,10 @@
     <ProjectReference Include="..\Inventory.Repository.Sales.Contracts\Inventory.Repository.Sales.Contracts.csproj">
       <Project>{709FAD54-9BD7-4DE9-B5F0-ACD2025E33C4}</Project>
       <Name>Inventory.Repository.Sales.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Inventory.UI.Sales.Contracts\Inventory.UI.Sales.Contracts.csproj">
+      <Project>{613D9CCA-95D2-4C70-B25B-229B2F70476C}</Project>
+      <Name>Inventory.UI.Sales.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
